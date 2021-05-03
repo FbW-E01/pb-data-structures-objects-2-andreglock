@@ -102,3 +102,12 @@ programming.challengingRewarding = function() {
 };
 
 console.log(programming.challengingRewarding());
+console.log(programming.challengingRewarding);//If I don't call the function the console.log tells me that this is a function but don't execute the function.
+
+Object.seal(programming); //Object.seal ensures that properties can't be deleted or changed
+delete programming.challengingRewarding;
+
+Object.freeze(programming); //Object.freeze ensures that values can't be deleted or changed
+programming.challengingRewarding = 'Something else';
+
+console.log(programming);
